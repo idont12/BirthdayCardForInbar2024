@@ -1,0 +1,88 @@
+:root{
+    --MainColor:#5a56af;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    direction: rtl;
+    font-family: 'rubik', sans-serif;
+    margin: 0px;
+    background-image: linear-gradient(150deg, white, #efdcff);
+    color: var(--MainColor);
+}
+
+
+.screen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input:focus-visible{
+    outline: none;
+}
+
+input[type="text"],input[type="password"]{
+    border: none;
+    font-family: 'rubik';
+    font-weight: 100;
+    font-size: 2.5rem;
+    border-bottom: 1px solid var(--MainColor);
+    display: block;
+    width: fit-content;
+    background: transparent;
+}
+
+.card{
+    backdrop-filter: blur(30px) brightness(1.02);
+    box-shadow: 0px 4px 20px #d0bee0;
+    padding: 30px;
+    border-radius: 20px;
+    border: solid 3px #ffffff94;
+    margin: 20px;
+    max-width: 600px;
+}
+
+.bigText{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+
+.next:not(:disabled):hover::before{
+    transform: rotate(135deg) translate(0.5px, 0.5px);
+}
+
+.next {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100px;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    LEFT: 0PX;
+}
+
+.next:before {
+    border: solid var(--MainColor);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg) translate(-1.5px, -1.5px);
+    -webkit-transform: rotate(135deg) translate(-1.5px, -1.5px);
+    content: "";
+    transition: all 200ms;
+}
+
+.next:disabled{
+    opacity: 20%;
+}
+
+.hideCard{
+    display: none;
+}
